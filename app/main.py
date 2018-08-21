@@ -17,6 +17,7 @@ import logging
 from flask import Flask
 from flask import request
 from airports import Airports
+from visitstats import Visitstats
 
 app = Flask(__name__)
 airport_util = Airports()
@@ -31,6 +32,16 @@ def airportName():
     if maybe_name is None:
       return 'IATA code not found : %s' % iata_code, 400
     return maybe_name, 200
+
+
+visitstats_util = Visitstats()
+
+@app.route('/getMaxSiteVisitsDept', methods=['GET'])
+def visitDate();
+visit_date = request.args.get('visitDate')
+if visit_date is Nonereturn 'Provide a valid visit date',400
+dept_name = get_max_sitvisits_dept(visit_date)
+return dept_name
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
