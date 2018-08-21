@@ -23,7 +23,9 @@ app = Flask(__name__)
 airport_util = Airports()
 
 @app.route('/airportName', methods=['GET'])
+@app.route('/getMaxSiteVisitsDept', methods=['GET'])
 def airportName():
+  if request.endpoint == 'airportName':
     """Given an airport IATA code, return that airport's name."""
     iata_code = request.args.get('iataCode')
     if iata_code is None:
@@ -33,15 +35,13 @@ def airportName():
       return 'IATA code not found : %s' % iata_code, 400
     return maybe_name, 200
 
+  else if request.endpoint == 'getMaxSiteVisitsDept':
+    visitstats_util = Visitstats()
+    visit_date = request.args.get('visitDate')
+      if visit_date is Nonereturn 'Provide a valid visit date',400
+        dept_name = get_max_sitvisits_dept(visit_date)
+        return dept_name
+  else return "Hello Google Home"
 
-visitstats_util = Visitstats()
-
-@app.route('/getMaxSiteVisitsDept', methods=['GET'])
-def getMaxSiteVisitsDept();
-visit_date = request.args.get('visitDate')
-if visit_date is Nonereturn 'Provide a valid visit date',400
-dept_name = get_max_sitvisits_dept(visit_date)
-return dept_name
-
-if __name__ == '__main__':
+  if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
