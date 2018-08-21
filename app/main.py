@@ -38,7 +38,8 @@ def airportName():
   elif request.endpoint == 'getMaxSiteVisitsDept':
     visitstats_util = Visitstats()
     visit_date = request.args.get('visitDate')
-      if visit_date is Nonereturn 'Provide a valid visit date',400
+      if visit_date is None:
+        return 'Provide a valid visit date',400
         dept_name = get_max_sitvisits_dept(visit_date)
         return dept_name
   else: return "Hello Google Home"
