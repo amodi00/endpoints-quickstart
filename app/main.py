@@ -37,7 +37,7 @@ def airportName():
 visitstats_util = Visitstats()
 
 @app.route('/getMaxSiteVisitsDept', methods=['GET'])
-def visitDate();
+def getMaxSiteVisitsDept();
 visit_date = request.args.get('visitDate')
 if visit_date is Nonereturn 'Provide a valid visit date',400
 dept_name = get_max_sitvisits_dept(visit_date)
