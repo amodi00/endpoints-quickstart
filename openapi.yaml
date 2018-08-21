@@ -39,3 +39,20 @@ paths:
             type: string
         400:
           description: "The IATA code is invalid or missing."
+  "/getMaxSiteVisitsDept":
+    get:
+      description: "Gets the department who had maximum site visits yesterday for a date (Aug-7)"
+      operationId: "visitDate"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."
