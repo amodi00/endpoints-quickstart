@@ -32,12 +32,12 @@ class Visitstats(object):
     for row in self.airport_reader:
       if row['iata_code'] == iata_code:
         #return row['name']
-    #return None
-    return 'Building Materials'
+      #return None
+      return 'Building Materials'
   def get_max_orders_dept(orderDate) 
 # Get department with highest orders on a specific date
-  return 'Hardlines'
+    return 'Hardlines'
 
 def get_max_conv_dept(orderDate) 
 # Get department with highest conversion on a specific date
-return 'Decor'
+  return 'Decor'
