@@ -28,9 +28,9 @@ class Visitstats(object):
   def get_max_sitvisits_dept(visitDate):
 # Get department with max site visits on a specific visit date
     return 'Building Materials'
-  def get_max_orders_dept(orderDate) 
+  def get_max_orders_dept(orderDate):
 # Get department with highest orders on a specific date
     return 'Hardlines'
-  def get_max_conv_dept(orderDate) 
+  def get_max_conv_dept(orderDate):
 # Get department with highest conversion on a specific date
     return 'Decor'
