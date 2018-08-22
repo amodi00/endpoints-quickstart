@@ -22,22 +22,12 @@ class Visitstats(object):
 
   def __init__(self):
 # Connect to my sql database here
-    with open('third_party/airports.csv', 'r') as f:
-      self.airport_file = io.StringIO(f.read())
-      self.airport_reader = csv.DictReader(self.airport_file)
-
   def get_max_sitvisits_dept(visitDate):
 # Get department with max site visits on a specific visit date
-    self.airport_file.seek(0)
-    for row in self.airport_reader:
-      if row['iata_code'] == iata_code:
-        #return row['name']
-      #return None
-      return 'Building Materials'
+    return 'Building Materials'
   def get_max_orders_dept(orderDate) 
 # Get department with highest orders on a specific date
     return 'Hardlines'
-
-def get_max_conv_dept(orderDate) 
+  def get_max_conv_dept(orderDate) 
 # Get department with highest conversion on a specific date
-  return 'Decor'
+    return 'Decor'
