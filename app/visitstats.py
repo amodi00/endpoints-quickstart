@@ -21,6 +21,7 @@ class Visitstats(object):
   """An interface for reading data about airports."""
 
   def __init__(self):
+    self.test = 1
     
 # Connect to my sql database here
   def get_max_sitvisits_dept(visitDate):
