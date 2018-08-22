@@ -21,9 +21,7 @@ class Visitstats(object):
   """An interface for reading data about airports."""
 
   def __init__(self):
-    with open('third_party/airports.csv', 'r') as f:
-      self.airport_file = io.StringIO(f.read())
-      self.airport_reader = csv.DictReader(self.airport_file)
+    
 # Connect to my sql database here
   def get_max_sitvisits_dept(visitDate):
 # Get department with max site visits on a specific visit date
