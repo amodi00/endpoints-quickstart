@@ -33,3 +33,9 @@ class Visitstats(object):
   def get_dept_with_max_conv(self, orderDate):
 # Get department with highest conversion on a specific date
     return ('Decor')
+def get_dept_with_max_GD(self, orderDate):
+# Get department with highest conversion on a specific date
+    return ('Decor')
+def get_MC_with_max_visits(self, orderDate):
+# Get department with highest conversion on a specific date
+    return ('Decor')        
