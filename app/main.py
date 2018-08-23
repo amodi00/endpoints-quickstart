@@ -56,7 +56,7 @@ def getDeptWithMaxGD():
   dept_name = visitstats_util.get_dept_with_max_GD(visit_date)
   return dept_name, 200
 
-  @app.route('/getMCWithMaxVisits', methods=['GET'])
+@app.route('/getMCWithMaxVisits', methods=['GET'])
 def getMCWithMaxVisits():
   visitstats_util = Visitstats()
   visit_date = request.args.get('visitDate')
