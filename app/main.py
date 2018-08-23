@@ -40,7 +40,7 @@ def getMaxSiteVisitsDept():
   if visit_date is None:
     return 'Provide a valid visit date',400
   dept_name = visitstats_util.get_max_sitvisits_dept(visit_date)
-  return dept_name
+  return dept_name, 200
 
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=8080, debug=True)
