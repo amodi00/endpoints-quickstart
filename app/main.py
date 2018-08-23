@@ -39,7 +39,7 @@ def getMaxSiteVisitsDept():
   visit_date = request.args.get('visitDate')
   if visit_date is None:
     return 'Provide a valid visit date',400
-  dept_name = get_max_sitvisits_dept(visit_date)
+  dept_name = visitstats_util.get_max_sitvisits_dept(visit_date)
   return dept_name
 
 if __name__ == '__main__':
