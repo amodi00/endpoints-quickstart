@@ -21,9 +21,9 @@ from visitstats import Visitstats
 app = Flask(__name__)
   
 @app.route('/getDeptWithMaxSiteVisits', methods=['GET'])
-visitstats_util = Visitstats()
 
 def getDeptWithMaxSiteVisits():
+  visitstats_util = Visitstats()
   visit_date = request.args.get('visitDate')
   if visit_date is None:
     return 'Provide a valid visit date',400
