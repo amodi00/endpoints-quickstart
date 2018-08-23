@@ -24,12 +24,12 @@ class Visitstats(object):
     self.test = 1
     
 # Connect to my sql database here
-  def get_max_sitvisits_dept(visitDate):
+  def get_max_sitvisits_dept(self, visitDate):
 # Get department with max site visits on a specific visit date
     return ('Building Materials')
-  def get_max_orders_dept(orderDate):
+  def get_max_orders_dept(self, orderDate):
 # Get department with highest orders on a specific date
     return ('Hardlines')
-  def get_max_conv_dept(orderDate):
+  def get_max_conv_dept(self, orderDate):
 # Get department with highest conversion on a specific date
     return ('Decor')
