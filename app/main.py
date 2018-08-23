@@ -21,13 +21,30 @@ from visitstats import Visitstats
 app = Flask(__name__)
   
 @app.route('/getDeptWithMaxSiteVisits', methods=['GET'])
-
 def getDeptWithMaxSiteVisits():
   visitstats_util = Visitstats()
   visit_date = request.args.get('visitDate')
   if visit_date is None:
     return 'Provide a valid visit date',400
   dept_name = visitstats_util.get_dept_with_max_sitvisits(visit_date)
+  return dept_name, 200
+
+@app.route('/getDeptWithMaxOrders', methods=['GET'])
+def getDeptWithMaxOrders():
+  visitstats_util = Visitstats()
+  visit_date = request.args.get('visitDate')
+  if visit_date is None:
+    return 'Provide a valid visit date',400
+  dept_name = visitstats_util.get_dept_with_max_orders(visit_date)
+  return dept_name, 200
+
+@app.route('/getDeptWithMaxConversion', methods=['GET'])
+def getDeptWithMaxConversion():
+  visitstats_util = Visitstats()
+  visit_date = request.args.get('visitDate')
+  if visit_date is None:
+    return 'Provide a valid visit date',400
+  dept_name = visitstats_util.get_dept_with_max_conv(visit_date)
   return dept_name, 200
 
 if __name__ == '__main__':
