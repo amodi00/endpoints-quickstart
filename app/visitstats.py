@@ -39,3 +39,21 @@ def get_dept_with_max_GD(self, orderDate):
 def get_MC_with_max_visits(self, orderDate):
 # Get department with highest conversion on a specific date
     return ('Decor')        
+def get_top10_with_max_GD(self, orderDate):
+# Get department with highest conversion on a specific date - getTop10ProductsWithMaxGD
+    return ('Top 10 products are')       
+def get_MC_with_max_GD(self, orderDate):
+# Get department with highest conversion on a specific date - getMCWithMaxGD
+    return ('Decor')       
+def get_spcial_buy(self):
+# Get department with highest conversion on a specific date - getSpecialBuy
+    return ('Decor')                   
+def get_noOfSKUs_special_buy(self):
+# Get department with highest conversion on a specific date - getNoOfSKUsSpecialBuy
+    return ('Decor')                   
+def get_todays_conv(self, orderDate):
+# Get department with highest conversion on a specific date - getTodaysConv
+    return ('Decor')  
+def get_MC_with_max_conv(self, orderDate):
+# Get department with highest conversion on a specific date - getMCWithMaxConv
+    return ('Decor')                       
