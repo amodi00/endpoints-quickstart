@@ -22,10 +22,9 @@ from visitstats import Visitstats
 app = Flask(__name__)
 airport_util = Airports()
 
-@app.route('/airportName/name', methods=['GET'])
-@app.route('/airportName/getMaxSiteVisitsDept', methods=['GET'])
+@app.route('/airportName', methods=['GET'])
 def airportName():
-  if request.endpoint == 'name':
+  if request.endpoint == 'airportName':
     """Given an airport IATA code, return that airport's name."""
     iata_code = request.args.get('iataCode')
     if iata_code is None:
@@ -44,6 +43,7 @@ def airportName():
     return dept_name
   else: 
     return "Hello Google Home"
+@app.route('/getMaxSiteVisitsDept', methods=['GET'])
 def getMaxSiteVisitsDept():
   return 'Test Success'
   if __name__ == '__main__':
