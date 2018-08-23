@@ -93,8 +93,9 @@ def getSpecialBuy():
 @app.route('/getNoOfSKUsSpecialBuy', methods=['GET'])
 def getNoOfSKUsSpecialBuy():
   visitstats_util = Visitstats()
-  dept_name = visitstats_util.get_noOfSKUs_special_buy()
-  return dept_name, 200
+  # dept_name = visitstats_util.get_noOfSKUs_special_buy()
+  # return dept_name, 200
+  return "This is in progress", 200
 
 @app.route('/getTodaysConv', methods=['GET'])
 def getTodaysConv():
@@ -111,8 +112,9 @@ def getMCWithMaxConv():
   visit_date = request.args.get('visitDate')
   if visit_date is None:
     return 'Provide a valid visit date',400
-  dept_name = visitstats_util.get_MC_with_max_conv(visit_date)
-  return dept_name, 200
+  # dept_name = visitstats_util.get_MC_with_max_conv(visit_date)
+  # return dept_name, 200
+  return "This is in progress", 200
 
 
 if __name__ == '__main__':
