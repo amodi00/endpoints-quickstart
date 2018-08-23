@@ -18,18 +18,18 @@ import csv
 import io
 
 class Visitstats(object):
-  """An interface for reading data about airports."""
+  """An interface for reading data about dashboard numbers."""
 
   def __init__(self):
     self.test = 1
     
 # Connect to my sql database here
-  def get_max_sitvisits_dept(self, visitDate):
+  def get_dept_with_max_sitvisits(self, visitDate):
 # Get department with max site visits on a specific visit date
     return ('Building Materials')
-  def get_max_orders_dept(self, orderDate):
+  def get_dept_with_max_orders(self, orderDate):
 # Get department with highest orders on a specific date
     return ('Hardlines')
-  def get_max_conv_dept(self, orderDate):
+  def get_dept_with_max_conv(self, orderDate):
 # Get department with highest conversion on a specific date
     return ('Decor')
