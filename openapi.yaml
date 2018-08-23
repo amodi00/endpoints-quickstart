@@ -25,7 +25,7 @@ paths:
   "/getDeptWithMaxSiteVisits":
     get:
       description: "Gets the department who had maximum site visits yesterday for a date (Aug-7)"
-      operationId: "visitDate"
+      operationId: "visitDateForDept"
       parameters:
         -
           name: visitDate
@@ -42,7 +42,7 @@ paths:
   "/getDeptWithMaxOrders":
     get:
       description: "Gets the department who had maximum orders yesterday for a date (Aug-7)"
-      operationId: "visitDate"
+      operationId: "visitDateForMaxOrders"
       parameters:
         -
           name: visitDate
@@ -56,23 +56,23 @@ paths:
             type: string
         400:
           description: "The site visit date is invalid or missing."  
-  # "/getDeptWithMaxConversion":
-  #   get:
-  #     description: "Gets the department who had maximum conversion yesterday for a date (Aug-7)"
-  #     operationId: "visitDate"
-  #     parameters:
-  #       -
-  #         name: visitDate
-  #         in: query
-  #         required: true
-  #         type: string
-  #     responses:
-  #       200:
-  #         description: "Success."
-  #         schema:
-  #           type: string
-  #       400:
-  #         description: "The site visit date is invalid or missing."                    
+  "/getDeptWithMaxConversion":
+    get:
+      description: "Gets the department who had maximum conversion yesterday for a date (Aug-7)"
+      operationId: "visitDateForMaxConv"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."                    
   # "/getDeptWithMaxGD":
   #   get:
   #     description: "Gets the department who had maximum GD yesterday for a date (Aug-7)"
