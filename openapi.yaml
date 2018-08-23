@@ -142,7 +142,6 @@ paths:
         400:
           description: "The site visit date is invalid or missing."         
   "/getSpecialBuy":
-  operationId: "getSpecialBuy"
     get:
       description: "Gets today's special buy"
       operationId: "getSpecialBuy"
@@ -152,7 +151,6 @@ paths:
           schema:
             type: string
   "/getNoOfSKUsSpecialBuy":
-  operationId: "getNoOfSKUsSpecialBuy"
     get:
       description: "Gets number of SKUs in today's special buy"
       operationId: "getNoOfSKUsSpecialBuy"
@@ -162,7 +160,6 @@ paths:
           schema:
             type: string
   "/getTodaysConv":
-  operationId: "getTodaysConv"
     get:
       description: "Gets the today's conversion as of specified time"
       operationId: "getTodaysConv"
@@ -180,7 +177,6 @@ paths:
         400:
           description: "The time is invalid or missing."   
   "/getMCWithMaxConv":
-  operationId: "getMCWithMaxConv"
     get:
       description: "Gets the Marketing Channel with max conversion as of specified time"
       operationId: "getMCWithMaxConv"
