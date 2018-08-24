@@ -19,7 +19,7 @@ from flask import request
 from visitstats import Visitstats
 
 app = Flask(__name__)
-  
+
 @app.route('/getDeptWithMaxSiteVisits', methods=['GET'])
 def getDeptWithMaxSiteVisits():
   visitstats_util = Visitstats()
@@ -100,9 +100,6 @@ def getNoOfSKUsSpecialBuy():
 @app.route('/getTodaysConv', methods=['GET'])
 def getTodaysConv():
   visitstats_util = Visitstats()
-  visit_date = request.args.get('visitDate')
-  if visit_date is None:
-    return 'Provide a valid visit date',400
   dept_name = visitstats_util.get_todays_conv(visit_date)
   return dept_name, 200
 
