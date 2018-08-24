@@ -23,7 +23,7 @@ import MySQLdb
 # CLOUDSQL_CONNECTION_NAME = os.environ.get('CLOUDSQL_CONNECTION_NAME')
 # CLOUDSQL_USER = os.environ.get('CLOUDSQL_USER')
 # CLOUDSQL_PASSWORD = os.environ.get('CLOUDSQL_PASSWORD')
-CLOUDSQL_CONNECTION_NAME = business-dashboard-212916:us-east1:dashboard
+CLOUDSQL_CONNECTION_NAME = 'business-dashboard-212916:us-east1:dashboard'
 CLOUDSQL_USER = 'root'
 CLOUDSQL_PASSWORD = 'root'
 
