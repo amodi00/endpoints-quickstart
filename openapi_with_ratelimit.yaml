@@ -14,8 +14,8 @@
 ---
 swagger: "2.0"
 info:
-  title: "Airport Codes"
-  description: "Get the name of an airport from its three-letter IATA code."
+  title: "The Home Depot Site Visit Stats"
+  description: "Get the site visit stats for the store"
   version: "1.0.0"
 security:
   - api_key: []
@@ -24,16 +24,13 @@ host: "YOUR-PROJECT-ID.appspot.com"
 schemes:
   - "https"
 paths:
-  "/airportName":
+  "/getDeptWithMaxSiteVisits":
     get:
-      description: "Get the airport name for a given IATA code."
-      operationId: "airportName"
-      x-google-quota:
-        metricCosts:
-          airport_requests: 1
+      description: "Gets the department who had maximum site visits yesterday for a date (Aug-7)"
+      operationId: "getDeptWithMaxSiteVisits"
       parameters:
         -
-          name: iataCode
+          name: visitDate
           in: query
           required: true
           type: string
@@ -43,7 +40,161 @@ paths:
           schema:
             type: string
         400:
-          description: "The IATA code is invalid or missing."
+          description: "The site visit date is invalid or missing."
+  "/getDeptWithMaxOrders":
+    get:
+      description: "Gets the department who had maximum orders yesterday for a date (Aug-7)"
+      operationId: "getDeptWithMaxOrders"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."  
+  "/getDeptWithMaxConversion":
+    get:
+      description: "Gets the department who had maximum conversion yesterday for a date (Aug-7)"
+      operationId: "getDeptWithMaxConversion"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."                    
+  "/getDeptWithMaxGD":
+    get:
+      description: "Gets the department who had maximum GD yesterday for a date (Aug-7)"
+      operationId: "getDeptWithMaxGD"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."            
+  "/getMCWithMaxVisits":
+    get:
+      description: "Gets the Marketing Channel who had maximum visits yesterday for a date (Aug-7)"
+      operationId: "getMCWithMaxVisits"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."            
+  "/getTop10ProductsWithMaxGD":
+    get:
+      description: "Gets the Top 10 products who had maximum GD yesterday for a date (Aug-7)"
+      operationId: "getTop10ProductsWithMaxGD"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."            
+  "/getMCWithMaxGD":
+    get:
+      description: "Gets the Marketing Channel who had maximum GD yesterday for a date (Aug-7)"
+      operationId: "getMCWithMaxGD"
+      parameters:
+        -
+          name: visitDate
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The site visit date is invalid or missing."         
+  "/getSpecialBuy":
+    get:
+      description: "Gets today's special buy"
+      operationId: "getSpecialBuy"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+  "/getNoOfSKUsSpecialBuy":
+    get:
+      description: "Gets number of SKUs in today's special buy"
+      operationId: "getNoOfSKUsSpecialBuy"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+  "/getTodaysConv":
+    get:
+      description: "Gets the today's conversion as of specified time"
+      operationId: "getTodaysConv"
+      parameters:
+        -
+          name: time
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The time is invalid or missing."   
+  "/getMCWithMaxConv":
+    get:
+      description: "Gets the Marketing Channel with max conversion as of specified time"
+      operationId: "getMCWithMaxConv"
+      parameters:
+        -
+          name: time
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The time is invalid or missing."  
 securityDefinitions:
   # Basic authentication with an API key.
   api_key:
